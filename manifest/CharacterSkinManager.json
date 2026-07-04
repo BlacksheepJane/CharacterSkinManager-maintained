@@ -3,7 +3,7 @@
   "name": "CharacterSkinManager",
   "author": "BiliBili-KawaiNekoMe; maintained for compatibility by community",
   "description": "Manage character skins at runtime. Unofficial compatibility maintenance build for newer Slay the Spire 2 versions.",
-  "version": "v0.0.3+sts2.0.108.0.1",
+  "version": "v0.0.3+sts2.0.108.0.2",
   "has_pck": false,
   "has_dll": true,
   "dependencies": [],

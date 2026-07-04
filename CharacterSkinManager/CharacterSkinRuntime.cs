@@ -65,13 +65,41 @@ internal static class CharacterSkinRuntime
 			CharacterSkinSceneKind.CharacterSelect => definition.CharacterSelect.SkeletonDataPath, 
 			_ => definition.Battle.SkeletonDataPath, 
 		};
-		Resource val = ResourceLoader.Load<Resource>(text, (string)null, CacheMode.Reuse);
+		Resource val = LoadResourceWithFallback(text);
 		if (val == null)
 		{
 			Log.Warn("[CharacterSkinManager] Missing skeleton resource at " + text + ".", 2);
 			return null;
 		}
 		return new MegaSkeletonDataResource((Variant)(GodotObject)(object)val);
+	}
+
+	private static Resource? LoadResourceWithFallback(string path)
+	{
+		Resource resource = ResourceLoader.Load<Resource>(path, (string)null, CacheMode.Reuse);
+		if (resource != null)
+		{
+			return resource;
+		}
+		foreach (string fallbackPath in GetKnownPathFallbacks(path))
+		{
+			resource = ResourceLoader.Load<Resource>(fallbackPath, (string)null, CacheMode.Reuse);
+			if (resource != null)
+			{
+				Log.Info($"[CharacterSkinManager] Loaded skeleton resource using fallback path: {fallbackPath}", 2);
+				return resource;
+			}
+		}
+		return null;
+	}
+
+	private static IEnumerable<string> GetKnownPathFallbacks(string path)
+	{
+		string merchantPath = path.Replace("/animations/merchant/", "/merchant/", StringComparison.OrdinalIgnoreCase);
+		if (!string.Equals(merchantPath, path, StringComparison.OrdinalIgnoreCase))
+		{
+			yield return merchantPath;
+		}
 	}
 
 	public static bool TryApplyBattleSkeleton(NCreature creature)
