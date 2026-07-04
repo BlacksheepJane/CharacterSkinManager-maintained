@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>CharacterSkinManager</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>false</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>12.0</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Sts2GameDir Condition="'$(Sts2GameDir)' == '' and '$(STS2_GAME_DIR)' != ''">$(STS2_GAME_DIR)</Sts2GameDir>
+    <Sts2GameDir Condition="'$(Sts2GameDir)' == ''">$(MSBuildThisFileDirectory)..</Sts2GameDir>
+    <Sts2ManagedDir>$(Sts2GameDir)\data_sts2_windows_x86_64</Sts2ManagedDir>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GodotSharp" Private="false">
+      <HintPath>$(Sts2ManagedDir)\GodotSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="sts2" Private="false">
+      <HintPath>$(Sts2ManagedDir)\sts2.dll</HintPath>
+    </Reference>
+    <Reference Include="0Harmony" Private="false">
+      <HintPath>$(Sts2ManagedDir)\0Harmony.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>
