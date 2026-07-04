@@ -33,7 +33,7 @@ $env:STS2_GAME_DIR = "E:\Games\SteamLibrary\steamapps\common\Slay the Spire 2"
 dotnet build .\CharacterSkinManager.csproj -c Release
 ```
 
-## Credits
+## Credits and Acknowledgements
 
 - `Orca` mod 原作者：`WhiteRaven01`
 - 局内皮肤替换 UI 和代码作者：`kawaiNekoMe`
