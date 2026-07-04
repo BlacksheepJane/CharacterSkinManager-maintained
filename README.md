@@ -1,12 +1,13 @@
 # CharacterSkinManager Maintained
-[![Release](https://img.shields.io/github/v/release/BlacksheepJane/CharacterSkinManager-maintained?label=release)](https://github.com/BlacksheepJane/CharacterSkinManager-maintained/releases/latest)
-[![Downloads](https://img.shields.io/github/downloads/BlacksheepJane/CharacterSkinManager-maintained/total?label=downloads)](https://github.com/BlacksheepJane/CharacterSkinManager-maintained/releases)
 
 本仓库为 银龙奥卡战士皮肤-奥卡奥伽尼斯 的换肤依赖 `CharacterSkinManager` 的反编译后非官方维护版本，用于在《Slay the Spire 2》更新后修复兼容性问题。
 
 可在`v0.108.0`上正常运行。
 
 ## Install
+
+[![Release](https://img.shields.io/github/v/release/BlacksheepJane/CharacterSkinManager-maintained?label=release)](https://github.com/BlacksheepJane/CharacterSkinManager-maintained/releases/latest)
+[![Downloads](https://img.shields.io/github/downloads/BlacksheepJane/CharacterSkinManager-maintained/total?label=downloads)](https://github.com/BlacksheepJane/CharacterSkinManager-maintained/releases)
 
 从 Releases 下载最新的 `CharacterSkinManager-*.zip`，解压后用 `CharacterSkinManager` 文件夹替换：
 
