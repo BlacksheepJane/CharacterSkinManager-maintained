@@ -37,3 +37,4 @@ dotnet build .\CharacterSkinManager.csproj -c Release
 
 - `Orca` mod 原作者：`WhiteRaven01`
 - 局内皮肤替换 UI 和代码作者：`kawaiNekoMe`
+- Codex参与了本项目开发
