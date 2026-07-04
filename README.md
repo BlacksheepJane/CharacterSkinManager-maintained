@@ -1,34 +1,36 @@
 # CharacterSkinManager Maintained
 
-这是 `CharacterSkinManager` 的非官方维护版本，用来在《杀戮尖塔 2》更新后继续修复兼容性问题。
+本仓库为 银龙奥卡战士皮肤-奥卡奥伽尼斯 的换肤依赖 `CharacterSkinManager` 的反编译后非官方维护版本，用于在《Slay the Spire 2》更新后修复兼容性问题。
+
+可在`v0.108.0`上正常运行。
 
 ## Install
 
-从 Releases 下载最新的 `CharacterSkinManager-*.zip`，解压后把 `CharacterSkinManager` 文件夹放到：
+从 Releases 下载最新的 `CharacterSkinManager-*.zip`，解压后用 `CharacterSkinManager` 文件夹替换：
 
 ```text
-<Slay the Spire 2>\mods\
+<Slay the Spire 2>\mods\Orca\CharacterSkinManager v0.0.2
 ```
 
 最终结构应类似：
 
 ```text
-<Slay the Spire 2>\mods\CharacterSkinManager\CharacterSkinManager.dll
-<Slay the Spire 2>\mods\CharacterSkinManager\CharacterSkinManager.json
+<Slay the Spire 2>\mods\Orca\CharacterSkinManager\CharacterSkinManager.dll
+<Slay the Spire 2>\mods\Orca\CharacterSkinManager\CharacterSkinManager.json
 ```
-
-皮肤资源包按对应皮肤 mod 的说明安装。
 
 ## Build
 
-需要本机已安装《杀戮尖塔 2》和 .NET SDK 9 或更新版本。
+如果你希望自行编译或开发：
+
+需要本机已安装《Slay the Spire 2》和 .NET SDK 9 或更新版本。
 
 ```powershell
 $env:STS2_GAME_DIR = "E:\Games\SteamLibrary\steamapps\common\Slay the Spire 2"
 dotnet build .\CharacterSkinManager.csproj -c Release
 ```
 
-如果仓库就在游戏目录下，也可以直接运行：
+如果仓库clone在游戏目录下，也可以直接运行：
 
 ```powershell
 .\build.ps1
