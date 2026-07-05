@@ -1,3 +1,5 @@
+考虑到原作者对于安全性存在顾虑，本仓库不再维护。如后续出现新问题可fork该仓库或反编译mod文件自行修复。
+
 # CharacterSkinManager Maintained
 
 本仓库为 银龙奥卡战士皮肤-奥卡奥伽尼斯 的换肤依赖 `CharacterSkinManager` 的反编译后非官方维护版本，用于在《Slay the Spire 2》更新后修复兼容性问题。
